@@ -1,0 +1,45 @@
+.ts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ts-card {
+  background: linear-gradient(145deg, rgba(25, 12, 55, 0.9), rgba(15, 8, 35, 0.95));
+  border: 1px solid rgba(100, 60, 170, 0.35);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.ts-cat-title {
+  font-family: 'Preahvihear', cursive;
+  font-size: 1rem;
+  color: #c89dff;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.ts-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ts-tag {
+  background: rgba(113, 39, 186, 0.2);
+  border: 1px solid rgba(152, 87, 211, 0.35);
+  color: #d8ddf0;
+  font-size: 0.82rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ts-tag:hover {
+  background: rgba(113, 39, 186, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .ts-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,12 @@
+.blog-placeholder {
+  background: linear-gradient(145deg, rgba(25, 12, 55, 0.9), rgba(15, 8, 35, 0.95));
+  border: 1px solid rgba(100, 60, 170, 0.35);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+}
+
+.blog-placeholder p {
+  color: #a0a8c8;
+  font-size: 1rem;
+}

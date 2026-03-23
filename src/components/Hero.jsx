@@ -1,5 +1,7 @@
 import './Hero.css';
 
+const base = import.meta.env.BASE_URL;
+
 export default function Hero() {
   return (
     <section id="home" className="hero">
@@ -7,13 +9,13 @@ export default function Hero() {
         <div className="hero-photo-col">
           <div className="photo-frame">
             <div className="avatar-glow" />
-            <img src="/images/image1.png" alt="My photo" loading="lazy" />
+            <img src={`${base}images/image1.png`} alt="My photo" loading="lazy" />
           </div>
           <div className="photo-caption">
             <span className="caption-text">
               Hello! I Am <strong>Malki Amasha</strong>
             </span>
-            <img src="/images/Arrow.png" alt="Arrow" className="caption-arrow" />
+            <img src={`${base}images/Arrow.png`} alt="Arrow" className="caption-arrow" />
           </div>
         </div>
 
@@ -23,7 +25,7 @@ export default function Hero() {
             Judges a book<br />
             by its{' '}
             <span className="highlight">
-              <img src="/images/Ellipse.png" alt="" className="ellipse-bg" />
+              <img src={`${base}images/Ellipse.png`} alt="" className="ellipse-bg" />
               <span className="cover-text">cover</span>
             </span>
             ...
@@ -35,20 +37,19 @@ export default function Hero() {
       </div>
 
       <div className="hero-intro">
-        <h2 className="hero-heading">I'm a Data Analyst.|</h2>
+        <h2 className="hero-heading">I'm a Data Analyst</h2>
         <p className="hero-line">
           Currently, I'm a Trainee Business Analyst at{' '}
-          <span className="fb-icon">&#9679;</span>{' '}
+          <img src={`${base}images/companylogo.webp`} alt="Neuball" className="company-logo" />{' '}
           <a href="https://neuball.com/" target="_blank" rel="noreferrer">
             Neuball
           </a>
-          .
+          
         </p>
         <p className="intro">
-          A self-taught Data Analyst, functioning in the industry for 3+ years
-          now.
-          <br />I make meaningful and delightful digital products that create an
-          equilibrium between user needs and business goals.
+         Data Analyst & AI enthusiast with experience in building analytics dashboards, 
+          automation systems, and AI-powered chatbots. I enjoy transforming complex data into actionable 
+          insights and developing solutions that bridge the gap between business needs and technology.
         </p>
       </div>
     </section>

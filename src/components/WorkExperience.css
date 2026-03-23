@@ -56,11 +56,26 @@
   margin-bottom: 6px;
 }
 
+.exp-company {
+  display: block;
+  color: #9857d3;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.exp-period {
+  display: block;
+  color: #a0a8c8;
+  font-size: 0.72rem;
+  margin-bottom: 8px;
+}
+
 .exp-info p {
   color: #a0a8c8;
   font-size: 0.8rem;
   line-height: 1.5;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .exp-btn {

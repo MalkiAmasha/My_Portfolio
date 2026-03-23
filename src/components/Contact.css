@@ -33,11 +33,21 @@
 .social-link {
   color: #a0a8c8;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
   display: flex;
   align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
 }
 
 .social-link:hover {
   color: #9857d3;
+  transform: translateY(-2px);
+}
+
+.social-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 6px;
 }

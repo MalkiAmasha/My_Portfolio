@@ -2,8 +2,9 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import WorkExperience from './components/WorkExperience';
-import TeamSection from './components/TeamSection';
+import TechStack from './components/TechStack';
 import FeaturedProjects from './components/FeaturedProjects';
+import Blog from './components/Blog';
 import Contact from './components/Contact';
 import './App.css';
 
@@ -16,8 +17,9 @@ export default function App() {
         <Hero />
         <About />
         <WorkExperience />
-        <TeamSection />
+        <TechStack />
         <FeaturedProjects />
+        <Blog />
         <Contact />
       </main>
     </>

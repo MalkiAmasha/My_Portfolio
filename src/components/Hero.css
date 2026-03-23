@@ -158,10 +158,13 @@
   margin-bottom: 16px;
 }
 
-.hero-line .fb-icon {
-  color: #1877f2;
-  font-size: 0.7rem;
+.hero-line .company-logo {
+  height: 18px;
+  width: auto;
   vertical-align: middle;
+  margin-left: 6px;
+  margin-right: 4px;
+  border-radius: 3px;
 }
 
 .hero-line a {

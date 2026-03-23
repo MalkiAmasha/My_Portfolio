@@ -1,30 +1,30 @@
 import './Contact.css';
 
+const base = import.meta.env.BASE_URL;
+
 export default function Contact() {
   return (
     <section id="contact" className="section contact-section">
       <h2 className="section-title">Contact</h2>
       <p className="contact-text">
-        I'm currently looking to join a cross-functional team that values
-        improving people's lives through accessible design, or have a project in
-        mind? Let's connect.
+        Have a project in mind or want to collaborate? Feel free to reach out —
+        I'd love to connect!
       </p>
-      <a href="mailto:ibrahimmemon920@gmail.com" className="contact-email">
-        ibrahimmemon920@gmail.com
+      <a href="mailto:malkiamasha0316@gmail.com" className="contact-email">
+        malkiamasha0316@gmail.com
       </a>
       <div className="social-icons">
-        <a href="#" aria-label="Instagram" className="social-link">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-          </svg>
+        <a href="https://www.linkedin.com/in/malki-3-ama/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="social-link">
+          <img src={`${base}images/linkedin.jpg`} alt="LinkedIn" className="social-logo" />
+          <span>LinkedIn</span>
         </a>
-        <a href="#" aria-label="Dribbble" className="social-link">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm8.166 5.834a10.216 10.216 0 012.048 6.01c-.3-.064-3.294-.668-6.313-.29-.065-.14-.125-.28-.19-.42-.18-.41-.37-.82-.57-1.22 3.34-1.36 4.85-3.32 5.025-3.58zM12 1.79c2.57 0 4.92.99 6.68 2.61-.15.24-1.53 2.08-4.74 3.3-1.48-2.72-3.12-4.95-3.37-5.28A10.16 10.16 0 0112 1.79zM8.68 3.11c.24.33 1.86 2.56 3.36 5.22-4.24 1.13-7.98 1.11-8.39 1.11.58-2.78 2.48-5.09 5.03-6.33zM1.79 12v-.29c.4.01 4.76.06 9.27-1.27.26.5.5 1.02.73 1.53-.1.03-.2.05-.3.08-4.72 1.52-7.23 5.68-7.48 6.09A10.18 10.18 0 011.79 12zm3.45 8.26c.17-.27 2.09-3.88 7.14-5.66.02-.01.04-.01.05-.02 1.28 3.33 1.81 6.12 1.95 6.91a10.19 10.19 0 01-9.14-1.23zm11.09.22c-.1-.56-.56-3.24-1.74-6.52 2.83-.45 5.31.29 5.62.39a10.2 10.2 0 01-3.88 6.13z" />
-          </svg>
+        <a href="https://github.com/MalkiAmasha" target="_blank" rel="noreferrer" aria-label="GitHub" className="social-link">
+          <img src={`${base}images/github.png`} alt="GitHub" className="social-logo" />
+          <span>GitHub</span>
         </a>
-        <a href="#" aria-label="Google" className="social-link">
-          <strong style={{ fontSize: '18px' }}>G</strong>
+        <a href="mailto:malkiamasha0316@gmail.com" aria-label="Gmail" className="social-link">
+          <img src={`${base}images/gmail.png`} alt="Gmail" className="social-logo" />
+          <span>Gmail</span>
         </a>
       </div>
     </section>

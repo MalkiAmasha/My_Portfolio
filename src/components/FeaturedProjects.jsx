@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react';
 import './FeaturedProjects.css';
 
+const base = import.meta.env.BASE_URL;
+
 function ProjectRow({ title, description, image, reverse }) {
   const ref = useRef(null);
 
@@ -38,17 +40,17 @@ function ProjectRow({ title, description, image, reverse }) {
 
 const projects = [
   {
-    title: 'Example Project',
+    title: 'Fraud Detection in Credit Card Transactions',
     description:
-      'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-    image: '/images/coding.gif',
+      'Developed a machine learning fraud detection system using XGBoost, Random Forest, LightGBM, and more. Applied SMOTE resampling and SHAP for model explainability. Integrated the final model into a web interface using Python, Next.js, and a custom API for real-time predictions.',
+    image: `${base}images/coding.gif`,
     reverse: false,
   },
   {
-    title: 'Example Project',
+    title: 'Conversational BI Chatbot',
     description:
-      'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-    image: '/images/coding.gif',
+      'Built a Sinhala–English AI chatbot for querying business data using natural language. Developed with FlowiseAI, LangChain, and Google AI embeddings. Enables real-time data querying from CSV and PDF datasets, providing instant responses to analytical questions.',
+    image: `${base}images/coding.gif`,
     reverse: true,
   },
 ];

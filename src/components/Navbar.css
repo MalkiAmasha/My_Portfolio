@@ -4,13 +4,20 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 16px 40px;
   z-index: 999;
   background: rgba(4, 2, 14, 0.92);
   border-bottom: 1px solid rgba(80, 50, 140, 0.3);
   backdrop-filter: blur(12px);
+}
+
+.nav-brand {
+  font-family: 'Preahvihear', cursive;
+  font-size: 1rem;
+  color: #fff;
+  white-space: nowrap;
 }
 
 .topnav .logo {

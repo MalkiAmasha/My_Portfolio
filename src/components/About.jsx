@@ -1,36 +1,36 @@
 import './About.css';
 
-const hardSkills = [
-  'Customer development (MVP, MMP, MLP)',
-  'User flow & User persona, CJM, UJM',
-  'Generating a hypothesis, HADI cycle',
-  'Design Systems, UI Kit (Material Design, HIG)',
-  'Typography, colour & composition',
-  'Design thinking methodology',
-  'Competitor analysis',
-  'JTBD framework',
-  'Responsive design',
-  'Atomic design',
-  'Prototyping',
-  'Animating',
+const base = import.meta.env.BASE_URL;
+
+const dataAnalytics = [
+  'SQL',
+  'Excel',
+  'Data Analysis',
+  'Data Visualization',
+  'KPI Analysis',
 ];
 
-const softSkills = [
-  'Communicative',
-  'Self-organised',
-  'Responsible',
-  'Multitasking',
-  'Teamplayer',
-  'Fast learner',
+const programmingTools = [
+  'Python',
+  'R',
+  'React',
+  'Node.js',
+  'Git & GitHub',
 ];
 
-const tools = [
-  'Figma',
-  'Adobe Photoshop',
-  'Adobe Illustrator',
-  'Adobe After Effect',
-  'Protopie',
-  'Canva',
+const aiAutomation = [
+  'n8n',
+  'FlowiseAI',
+  'RAG Applications',
+  'Tesseract OCR',
+  'LangChain',
+];
+
+const businessOps = [
+  'Process Automation',
+  'Workflow Optimization',
+  'Business Intelligence',
+  'MySQL',
 ];
 
 export default function About() {
@@ -41,16 +41,17 @@ export default function About() {
         {/* Left — photo + bio */}
         <div className="about-left">
           <div className="about-photo-wrap">
-            <img src="/images/my_pic.jpeg" alt="Malki Amasha" className="about-photo" />
+            <img src={`${base}images/my_pic.jpeg`} alt="Malki Amasha" className="about-photo" />
           </div>
           <div className="about-bio">
             <h3 className="about-name">MALKI AMASHA</h3>
             <p className="about-role">Data Analyst</p>
             <p className="about-company">BSc (Hons) in Data Science, 2025</p>
             <p className="about-desc">
-              Once I became a Data Analyst I felt that this is my true place.
-              I would love to bring my knowledge of designing and copywriting
-              into new IT products
+              Business Data Analyst with hands-on experience in data analytics,
+              AI-driven automation, and business intelligence systems. Passionate
+              about applying AI, automation, and analytics to optimize business
+              operations and decision-making.
             </p>
             <p className="about-location">
               <span className="location-pin">&#9679;</span> Kadawatha, Sri Lanka
@@ -67,26 +68,36 @@ export default function About() {
         <div className="about-right">
           <div className="skills-columns">
             <div className="skill-col">
-              <h4>HARD SKILLS</h4>
-              <ul>
-                {hardSkills.map((s, i) => (
-                  <li key={i}>{s}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="skill-col-right">
               <div className="skill-group">
-                <h4>SOFT SKILLS</h4>
+                <h4>DATA ANALYTICS</h4>
                 <ul>
-                  {softSkills.map((s, i) => (
+                  {dataAnalytics.map((s, i) => (
                     <li key={i}>{s}</li>
                   ))}
                 </ul>
               </div>
               <div className="skill-group">
-                <h4>TOOLS</h4>
+                <h4>PROGRAMMING &amp; TOOLS</h4>
                 <ul>
-                  {tools.map((s, i) => (
+                  {programmingTools.map((s, i) => (
+                    <li key={i}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="skill-col-right">
+              <div className="skill-group">
+                <h4>AI &amp; AUTOMATION</h4>
+                <ul>
+                  {aiAutomation.map((s, i) => (
+                    <li key={i}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="skill-group">
+                <h4>BUSINESS &amp; OPERATIONS</h4>
+                <ul>
+                  {businessOps.map((s, i) => (
                     <li key={i}>{s}</li>
                   ))}
                 </ul>
@@ -114,7 +125,7 @@ export default function About() {
 
       {/* QR / LinkedIn */}
       <div className="about-linkedin">
-        <img src="/images/QR.png" alt="QR Code" className="about-qr" />
+        <img src={`${base}images/QR.png`} alt="QR Code" className="about-qr" />
         <div className="about-qr-text">
           <span>Check my</span>
           <strong>LinkedIn profile</strong>
