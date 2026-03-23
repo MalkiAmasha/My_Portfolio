@@ -1,0 +1,107 @@
+.project-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  translate: 0 30px;
+  transition: opacity 0.7s ease, translate 0.7s ease;
+}
+
+.project-row.visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.project-row.reverse {
+  direction: rtl;
+}
+
+.project-row.reverse > * {
+  direction: ltr;
+}
+
+.project-row.reverse .project-text {
+  text-align: right;
+}
+
+.project-row.reverse .project-links {
+  justify-content: flex-end;
+}
+
+.project-label {
+  color: #9857d3;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.project-name {
+  font-family: 'Preahvihear', cursive;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.project-desc {
+  background: rgba(20, 10, 45, 0.9);
+  border: 1px solid rgba(100, 60, 170, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.project-desc p {
+  color: #b8bdd4;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-link-icon {
+  color: #a0a8c8;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-link-icon:hover {
+  color: #9857d3;
+}
+
+.project-image {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(100, 60, 170, 0.25);
+  background: rgba(15, 8, 30, 0.6);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .project-row,
+  .project-row.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  .project-row.reverse .project-text {
+    text-align: left;
+  }
+  .project-row.reverse .project-links {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,80 @@
+.logo-showcase {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-showcase-inner {
+  position: relative;
+  width: 100%;
+  min-height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 50%, rgba(60, 20, 120, 0.5), transparent 70%),
+    linear-gradient(180deg, rgba(15, 5, 30, 0.4), rgba(5, 2, 15, 0.8));
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.logo-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(113, 39, 186, 0.35), transparent 65%);
+  z-index: 0;
+}
+
+.logo-big {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 30px rgba(113, 39, 186, 0.6));
+}
+
+.showcase-ring {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 1px solid rgba(113, 39, 186, 0.12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.showcase-ring.ring-2 {
+  width: 240px;
+  height: 240px;
+  border-color: rgba(113, 39, 186, 0.08);
+}
+
+.deco-code {
+  position: absolute;
+  color: rgba(152, 87, 211, 0.3);
+  font-size: 1.2rem;
+  font-family: monospace;
+  z-index: 1;
+}
+
+.deco-code.top-right {
+  top: 30%;
+  right: 18%;
+}
+
+.deco-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(152, 87, 211, 0.35);
+  z-index: 1;
+}
+
+.deco-dot.dot-1 { top: 25%; left: 22%; }
+.deco-dot.dot-2 { bottom: 30%; right: 28%; }

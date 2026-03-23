@@ -1,0 +1,121 @@
+.space {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(75, 30, 140, 0.45), transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(60, 20, 120, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(40, 15, 100, 0.1), transparent 35%);
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Subtle glowing dots — layer 1 */
+.space::before {
+  content: '';
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow:
+    120px 80px 0 0 rgba(200, 180, 255, 0.7),
+    350px 150px 0 0 rgba(180, 160, 240, 0.5),
+    600px 60px 0 1px rgba(200, 180, 255, 0.8),
+    850px 200px 0 0 rgba(180, 160, 240, 0.6),
+    1100px 120px 0 0 rgba(200, 180, 255, 0.5),
+    200px 350px 0 1px rgba(180, 160, 240, 0.7),
+    500px 400px 0 0 rgba(200, 180, 255, 0.5),
+    750px 320px 0 0 rgba(180, 160, 240, 0.6),
+    1000px 380px 0 1px rgba(200, 180, 255, 0.7),
+    80px 550px 0 0 rgba(180, 160, 240, 0.5),
+    300px 600px 0 1px rgba(200, 180, 255, 0.8),
+    550px 520px 0 0 rgba(180, 160, 240, 0.6),
+    900px 580px 0 0 rgba(200, 180, 255, 0.5),
+    1200px 500px 0 1px rgba(180, 160, 240, 0.7),
+    150px 720px 0 0 rgba(200, 180, 255, 0.6),
+    450px 780px 0 0 rgba(180, 160, 240, 0.5),
+    700px 700px 0 1px rgba(200, 180, 255, 0.7),
+    950px 750px 0 0 rgba(180, 160, 240, 0.6),
+    1150px 680px 0 0 rgba(200, 180, 255, 0.5),
+    50px 900px 0 1px rgba(180, 160, 240, 0.7),
+    400px 950px 0 0 rgba(200, 180, 255, 0.6),
+    650px 880px 0 0 rgba(180, 160, 240, 0.5),
+    1050px 920px 0 1px rgba(200, 180, 255, 0.8);
+  animation: twinkle1 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Subtle glowing dots — layer 2 (offset timing) */
+.space::after {
+  content: '';
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow:
+    250px 120px 0 0 rgba(200, 180, 255, 0.6),
+    480px 250px 0 1px rgba(180, 160, 240, 0.7),
+    720px 180px 0 0 rgba(200, 180, 255, 0.5),
+    980px 300px 0 0 rgba(180, 160, 240, 0.6),
+    100px 450px 0 1px rgba(200, 180, 255, 0.7),
+    380px 500px 0 0 rgba(180, 160, 240, 0.5),
+    620px 430px 0 0 rgba(200, 180, 255, 0.6),
+    860px 480px 0 1px rgba(180, 160, 240, 0.7),
+    1130px 350px 0 0 rgba(200, 180, 255, 0.5),
+    220px 650px 0 0 rgba(180, 160, 240, 0.6),
+    530px 700px 0 1px rgba(200, 180, 255, 0.8),
+    780px 620px 0 0 rgba(180, 160, 240, 0.5),
+    1020px 670px 0 0 rgba(200, 180, 255, 0.6),
+    170px 830px 0 1px rgba(180, 160, 240, 0.7),
+    460px 870px 0 0 rgba(200, 180, 255, 0.5),
+    710px 810px 0 0 rgba(180, 160, 240, 0.6),
+    1100px 850px 0 1px rgba(200, 180, 255, 0.7),
+    50px 980px 0 0 rgba(200, 180, 255, 0.6),
+    330px 1020px 0 0 rgba(180, 160, 240, 0.5),
+    900px 960px 0 1px rgba(200, 180, 255, 0.7);
+  animation: twinkle2 7s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes twinkle1 {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes twinkle2 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 80px auto 0;
+  padding: 0 32px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: 'Preahvihear', cursive;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  margin-bottom: 32px;
+  color: #fff;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 0 20px;
+    margin-top: 70px;
+  }
+}

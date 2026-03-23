@@ -1,0 +1,197 @@
+.hero {
+  padding: 80px 0 40px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Photo column — holds the frame + the floating caption */
+.hero-photo-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px; /* room for the caption above */
+}
+
+/* Caption floats above the photo */
+.photo-caption {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.caption-text {
+  font-family: 'Preahvihear', cursive;
+  font-size: 0.95rem;
+  color: #c99eff;
+  letter-spacing: 0.5px;
+}
+
+.caption-text strong {
+  color: #7127ba;
+  font-weight: 700;
+}
+
+.caption-arrow {
+  width: 70px;
+  height: auto;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  margin-top: -2px;
+}
+
+/* Photo frame — no visible circle, just glow */
+.photo-frame {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+}
+
+.avatar-glow {
+  position: absolute;
+  inset: -80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(113, 39, 186, 0.45), rgba(113, 39, 186, 0.2) 50%, transparent 70%);
+  z-index: 0;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.photo-frame img {
+  width: 88%;
+  height: 88%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Right-side hero text */
+.hero-content {
+  padding-top: 20px;
+}
+
+.hero-job {
+  color: #9857d3;
+  font-family: 'Preahvihear', cursive;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hero-title {
+  font-family: 'Preahvihear', cursive;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.highlight {
+  color: #c89dff;
+  position: relative;
+  display: inline-block;
+}
+
+.ellipse-bg {
+  position: absolute;
+  width: 110%;
+  height: 140%;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.cover-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  color: #b8bdd4;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Bottom intro section */
+.hero-intro {
+  margin-top: 48px;
+  max-width: 700px;
+}
+
+.hero-heading {
+  font-family: 'Preahvihear', cursive;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.hero-line {
+  color: #c0c8e0;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.hero-line .fb-icon {
+  color: #1877f2;
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+
+.hero-line a {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.hero-line a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  color: #b8bdd4;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { padding: 40px 0 20px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .hero-photo-col { order: -1; }
+  .hero-intro { text-align: center; margin: 32px auto 0; }
+  .intro { margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+  .photo-frame { width: 150px; height: 150px; }
+  .hero-title { font-size: 1.8rem; }
+  .hero-heading { font-size: 1.6rem; }
+  .hero-photo-col { padding-top: 70px; }
+}
