@@ -118,4 +118,11 @@
 
 @media (max-width: 768px) {
   .exp-grid { grid-template-columns: 1fr; }
+  .exp-card { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+  .exp-card { padding: 16px; }
+  .exp-icon { width: 44px; height: 44px; border-radius: 10px; }
+  .exp-card-inner { gap: 12px; }
 }

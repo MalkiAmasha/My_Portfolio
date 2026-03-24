@@ -97,11 +97,30 @@
   .project-row.reverse {
     grid-template-columns: 1fr;
     direction: ltr;
+    gap: 20px;
+    margin-bottom: 48px;
   }
   .project-row.reverse .project-text {
     text-align: left;
   }
   .project-row.reverse .project-links {
     justify-content: flex-start;
+  }
+  .project-name {
+    font-size: 1.3rem;
+  }
+  .project-desc {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-row,
+  .project-row.reverse {
+    margin-bottom: 36px;
+    gap: 16px;
+  }
+  .project-name {
+    font-size: 1.15rem;
   }
 }

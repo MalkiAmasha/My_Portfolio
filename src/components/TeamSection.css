@@ -29,3 +29,14 @@
   margin: 0 auto;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .team-section { padding: 48px 0; }
+  .team-text { font-size: 1rem; }
+  .skills-img { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .team-text { font-size: 0.9rem; }
+  .team-sub { font-size: 0.82rem; }
+}

@@ -42,4 +42,10 @@
 
 @media (max-width: 768px) {
   .ts-grid { grid-template-columns: 1fr; }
+  .ts-card { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+  .ts-card { padding: 16px; }
+  .ts-tag { font-size: 0.78rem; padding: 5px 12px; }
 }

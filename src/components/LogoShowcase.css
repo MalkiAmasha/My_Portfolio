@@ -78,3 +78,20 @@
 
 .deco-dot.dot-1 { top: 25%; left: 22%; }
 .deco-dot.dot-2 { bottom: 30%; right: 28%; }
+
+@media (max-width: 768px) {
+  .logo-showcase { padding: 48px 0; }
+  .logo-showcase-inner { min-height: 260px; }
+  .logo-big { width: 100px; height: 100px; }
+  .showcase-ring { width: 260px; height: 260px; }
+  .showcase-ring.ring-2 { width: 180px; height: 180px; }
+  .logo-glow { width: 220px; height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .logo-showcase-inner { min-height: 220px; border-radius: 16px; }
+  .logo-big { width: 80px; height: 80px; }
+  .showcase-ring { width: 200px; height: 200px; }
+  .showcase-ring.ring-2 { width: 140px; height: 140px; }
+  .deco-code { font-size: 0.9rem; }
+}
