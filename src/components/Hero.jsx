@@ -20,18 +20,18 @@ export default function Hero() {
         </div>
 
         <div className="hero-content">
-          <span className="hero-job">A Designer who</span>
+          <span className="hero-job">A Data Analyst who</span>
           <h1 className="hero-title">
-            Judges a book<br />
-            by its{' '}
+            turns data<br />
+            into{' '}
             <span className="highlight">
               <img src={`${base}images/Ellipse.png`} alt="" className="ellipse-bg" />
-              <span className="cover-text">cover</span>
+              <span className="cover-text">decisions</span>
             </span>
             ...
           </h1>
           <p className="hero-subtitle">
-            Because if the cover does not impress you what else can?
+            Because insights mean nothing without impact.
           </p>
         </div>
       </div>
