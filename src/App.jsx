@@ -1,11 +1,8 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import WorkExperience from './components/WorkExperience';
-import TechStack from './components/TechStack';
-import FeaturedProjects from './components/FeaturedProjects';
-import Blog from './components/Blog';
-import Contact from './components/Contact';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetail from './pages/ProjectDetail';
 import './App.css';
 
 export default function App() {
@@ -14,13 +11,11 @@ export default function App() {
       <div className="space" />
       <Navbar />
       <main className="page">
-        <Hero />
-        <About />
-        <WorkExperience />
-        <TechStack />
-        <FeaturedProjects />
-        <Blog />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
+        </Routes>
       </main>
     </>
   );

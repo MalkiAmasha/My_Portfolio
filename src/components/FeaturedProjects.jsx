@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import projects from '../data/projects';
 import './FeaturedProjects.css';
 
-const base = import.meta.env.BASE_URL;
-
-function ProjectRow({ title, description, image, reverse }) {
+function ProjectRow({ title, description, image, slug, reverse }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -27,8 +27,9 @@ function ProjectRow({ title, description, image, reverse }) {
           <p>{description}</p>
         </div>
         <div className="project-links">
-          <a href="#" className="project-link-icon" aria-label="External link">&#10038;</a>
-          <a href="#" className="project-link-icon" aria-label="GitHub">&#10038;</a>
+          <Link to={`/projects/${slug}`} className="project-see-more">
+            See More &rarr;
+          </Link>
         </div>
       </div>
       <div className="project-image">
@@ -38,29 +39,24 @@ function ProjectRow({ title, description, image, reverse }) {
   );
 }
 
-const projects = [
-  {
-    title: 'Fraud Detection in Credit Card Transactions',
-    description:
-      'Developed a machine learning fraud detection system using XGBoost, Random Forest, LightGBM, and more. Applied SMOTE resampling and SHAP for model explainability. Integrated the final model into a web interface using Python, Next.js, and a custom API for real-time predictions.',
-    image: `${base}images/coding.gif`,
-    reverse: false,
-  },
-  {
-    title: 'Conversational BI Chatbot',
-    description:
-      'Built a Sinhala–English AI chatbot for querying business data using natural language. Developed with FlowiseAI, LangChain, and Google AI embeddings. Enables real-time data querying from CSV and PDF datasets, providing instant responses to analytical questions.',
-    image: `${base}images/coding.gif`,
-    reverse: true,
-  },
-];
-
 export default function FeaturedProjects() {
   return (
     <section id="projects" className="section">
       {projects.map((p, i) => (
-        <ProjectRow key={i} {...p} />
+        <ProjectRow
+          key={i}
+          title={p.shortTitle}
+          description={p.description}
+          image={p.image}
+          slug={p.slug}
+          reverse={p.reverse}
+        />
       ))}
+      <div className="projects-view-all">
+        <Link to="/projects" className="view-all-btn">
+          View All Projects &rarr;
+        </Link>
+      </div>
     </section>
   );
 }
