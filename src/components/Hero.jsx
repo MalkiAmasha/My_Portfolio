@@ -29,10 +29,10 @@ export default function Hero() {
               <span className="cover-text">decisions</span>
             </span>
             ...
-          </h1>
+          </h1><br>
           <p className="hero-subtitle">
-            Because insights mean nothing without impact.
-          </p>
+            Because if data doesn’t drive decisions, what will?
+          </p></br>
         </div>
       </div>
 
