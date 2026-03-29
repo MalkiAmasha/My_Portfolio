@@ -3,34 +3,45 @@ import './About.css';
 const base = import.meta.env.BASE_URL;
 
 const dataAnalytics = [
-  'SQL',
-  'Excel',
-  'Data Analysis',
+  'SQL (MySQL)',
+  'Excel (Dashboards & KPI Analysis)',
   'Data Visualization',
-  'KPI Analysis',
+  'Business Insights',
 ];
 
-const programmingTools = [
-  'Python',
-  'R',
+const mlAi = [
+  'Scikit-learn, XGBoost, LightGBM',
+  'CNN (Computer Vision)',
+  'NLP (Conversational AI & RAG)',
+  'Model Evaluation (ROC-AUC, F1)',
+  'SMOTE & SHAP',
+];
+
+const fullStack = [
   'React',
   'Node.js',
-  'Git & GitHub',
+  'MySQL',
+  'API Integration',
 ];
 
 const aiAutomation = [
   'n8n',
-  'FlowiseAI',
+  'FlowiseAI & LangChain',
   'RAG Applications',
-  'Tesseract OCR',
-  'LangChain',
+  'AI Chatbots',
+];
+
+const computerVision = [
+  'Tesseract.js OCR',
+  'Image Processing (Sharp)',
+  'Identity Verification',
 ];
 
 const businessOps = [
+  'KPI Tracking',
+  'Business Intelligence',
   'Process Automation',
   'Workflow Optimization',
-  'Business Intelligence',
-  'MySQL',
 ];
 
 export default function About() {
@@ -69,7 +80,7 @@ export default function About() {
           <div className="skills-columns">
             <div className="skill-col">
               <div className="skill-group">
-                <h4>DATA ANALYTICS</h4>
+                <h4>Data Analytics & BI</h4>
                 <ul>
                   {dataAnalytics.map((s, i) => (
                     <li key={i}>{s}</li>
@@ -77,9 +88,17 @@ export default function About() {
                 </ul>
               </div>
               <div className="skill-group">
-                <h4>PROGRAMMING &amp; TOOLS</h4>
+                <h4>MACHINE LEARNING &amp; DEEP LEARNING</h4>
                 <ul>
-                  {programmingTools.map((s, i) => (
+                  {mlAi.map((s, i) => (
+                    <li key={i}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="skill-group">
+                <h4>FULL-STACK DEVELOPMENT</h4>
+                <ul>
+                  {fullStack.map((s, i) => (
                     <li key={i}>{s}</li>
                   ))}
                 </ul>
@@ -87,7 +106,7 @@ export default function About() {
             </div>
             <div className="skill-col-right">
               <div className="skill-group">
-                <h4>AI &amp; AUTOMATION</h4>
+                <h4>AI Systems &amp; AUTOMATION</h4>
                 <ul>
                   {aiAutomation.map((s, i) => (
                     <li key={i}>{s}</li>
@@ -95,7 +114,15 @@ export default function About() {
                 </ul>
               </div>
               <div className="skill-group">
-                <h4>BUSINESS &amp; OPERATIONS</h4>
+                <h4>OCR &amp; COMPUTER VISION</h4>
+                <ul>
+                  {computerVision.map((s, i) => (
+                    <li key={i}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="skill-group">
+                <h4>BUSINESS &amp; BI</h4>
                 <ul>
                   {businessOps.map((s, i) => (
                     <li key={i}>{s}</li>

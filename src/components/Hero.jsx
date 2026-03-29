@@ -33,6 +33,13 @@ export default function Hero() {
           <p className="hero-subtitle">
             Because if data doesn’t drive decisions, what will?
           </p>
+          <a
+            href={`${base}CV/Malki Amasha - cv.pdf`}
+            download="Malki Amasha - CV.pdf"
+            className="download-cv-btn"
+          >
+            Download CV
+          </a>
         </div>
       </div>
 

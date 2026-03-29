@@ -2,20 +2,20 @@ import './TechStack.css';
 
 const categories = [
   {
-    title: 'Data Analytics',
-    items: ['SQL', 'MySQL', 'Excel', 'Data Visualization', 'KPI Analysis'],
+    title: 'Data & BI',
+    items: ['MySQL', 'Excel', 'KPI Analysis', 'Dashboard Reporting', 'User Segmentation', 'Revenue Analysis'],
   },
   {
-    title: 'Programming & Tools',
-    items: ['Python', 'R', 'React', 'Node.js', 'Next.js', 'Git & GitHub'],
+    title: 'AI & ML',
+    items: ['Machine Learning', 'XGBoost', 'LightGBM', 'SHAP', 'RAG Applications', 'FlowiseAI'],
   },
   {
-    title: 'AI & Automation',
-    items: ['n8n', 'FlowiseAI', 'LangChain', 'RAG Applications', 'Tesseract OCR'],
+    title: 'Automation & Backend',
+    items: ['n8n', 'Node.js', 'API Integration', 'Tesseract.js OCR', 'Process Automation', 'Workflow Design'],
   },
   {
-    title: 'Business & Operations',
-    items: ['Process Automation', 'Workflow Optimization', 'Business Intelligence'],
+    title: 'Frontend & Tools',
+    items: ['React', 'Next.js', 'Git & GitHub', 'Python', 'R'],
   },
 ];
 

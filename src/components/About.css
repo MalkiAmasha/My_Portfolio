@@ -154,10 +154,16 @@
   border-bottom: none;
 }
 
+.skill-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
 .skill-col-right {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
 .skill-group {
